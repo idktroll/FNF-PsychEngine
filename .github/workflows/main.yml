@@ -1,5 +1,4 @@
-on:
- workflow_dispatch:
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,7 +10,7 @@ jobs:
           ndk-version: r21e
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.3.6
+          haxe-version: latest
       - name: install all
         run: |
           haxelib git hmm https://github.com/funkincrew/hmm
